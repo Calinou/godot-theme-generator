@@ -1,0 +1,387 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://fonts/noto_sans_regular.tres" type="DynamicFontData" id=1]
+[ext_resource path="res://main.gd" type="Script" id=2]
+[ext_resource path="res://save_theme.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+
+[sub_resource type="StyleBoxFlat" id=5]
+
+[sub_resource type="StyleBoxFlat" id=6]
+
+[sub_resource type="StyleBoxFlat" id=7]
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[sub_resource type="StyleBoxEmpty" id=10]
+
+[sub_resource type="StyleBoxEmpty" id=11]
+
+[sub_resource type="StyleBoxEmpty" id=12]
+
+[sub_resource type="StyleBoxEmpty" id=13]
+
+[sub_resource type="StyleBoxEmpty" id=14]
+
+[sub_resource type="StyleBoxEmpty" id=15]
+
+[sub_resource type="StyleBoxEmpty" id=16]
+
+[sub_resource type="StyleBoxEmpty" id=17]
+
+[sub_resource type="Theme" id=18]
+Button/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )
+Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+Button/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
+Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = null
+Button/styles/disabled = SubResource( 4 )
+Button/styles/focus = null
+Button/styles/hover = SubResource( 5 )
+Button/styles/normal = SubResource( 6 )
+Button/styles/pressed = SubResource( 7 )
+CheckBox/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )
+CheckBox/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+CheckBox/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
+CheckBox/colors/font_color_hover_pressed = Color( 1, 1, 1, 1 )
+CheckBox/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+CheckBox/constants/check_vadjust = 0
+CheckBox/constants/hseparation = 4
+CheckBox/fonts/font = null
+CheckBox/icons/checked = null
+CheckBox/icons/radio_checked = null
+CheckBox/icons/radio_unchecked = null
+CheckBox/icons/unchecked = null
+CheckBox/styles/disabled = SubResource( 8 )
+CheckBox/styles/focus = null
+CheckBox/styles/hover = SubResource( 9 )
+CheckBox/styles/hover_pressed = SubResource( 10 )
+CheckBox/styles/normal = SubResource( 11 )
+CheckBox/styles/pressed = SubResource( 12 )
+CheckButton/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )
+CheckButton/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+CheckButton/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
+CheckButton/colors/font_color_hover_pressed = Color( 1, 1, 1, 1 )
+CheckButton/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+CheckButton/constants/check_vadjust = 0
+CheckButton/constants/hseparation = 4
+CheckButton/fonts/font = null
+CheckButton/icons/off = null
+CheckButton/icons/off_disabled = null
+CheckButton/icons/on = null
+CheckButton/icons/on_disabled = null
+CheckButton/styles/disabled = SubResource( 13 )
+CheckButton/styles/focus = null
+CheckButton/styles/hover = SubResource( 14 )
+CheckButton/styles/hover_pressed = SubResource( 15 )
+CheckButton/styles/normal = SubResource( 16 )
+CheckButton/styles/pressed = SubResource( 17 )
+
+[node name="Main" type="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = SubResource( 2 )
+color = Color( 0.133333, 0.12549, 0.141176, 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = 580.0
+custom_constants/separation = 24
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_right = 984.0
+margin_bottom = 45.0
+custom_fonts/font = SubResource( 3 )
+text = "Godot theme generator"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 69.0
+margin_right = 984.0
+margin_bottom = 333.0
+custom_constants/separation = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Generator" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+margin_right = 205.0
+margin_bottom = 264.0
+grow_horizontal = 2
+custom_constants/separation = 12
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpacerTop" type="Control" parent="VBoxContainer/HBoxContainer/Generator"]
+margin_right = 205.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 0, 15 )
+
+[node name="BaseColor" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Generator"]
+margin_top = 27.0
+margin_right = 205.0
+margin_bottom = 56.0
+custom_constants/separation = 16
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Generator/BaseColor"]
+margin_top = 3.0
+margin_right = 115.0
+margin_bottom = 26.0
+rect_min_size = Vector2( 115, 0 )
+text = "Base Color"
+align = 2
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="VBoxContainer/HBoxContainer/Generator/BaseColor"]
+margin_left = 131.0
+margin_right = 195.0
+margin_bottom = 29.0
+rect_min_size = Vector2( 64, 0 )
+
+[node name="AccentColor" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Generator"]
+margin_top = 68.0
+margin_right = 205.0
+margin_bottom = 97.0
+custom_constants/separation = 16
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Generator/AccentColor"]
+margin_top = 3.0
+margin_right = 115.0
+margin_bottom = 26.0
+rect_min_size = Vector2( 115, 0 )
+text = "Accent Color"
+align = 2
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="VBoxContainer/HBoxContainer/Generator/AccentColor"]
+margin_left = 131.0
+margin_right = 195.0
+margin_bottom = 29.0
+rect_min_size = Vector2( 64, 0 )
+
+[node name="CornerRadius" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Generator"]
+margin_top = 109.0
+margin_right = 205.0
+margin_bottom = 142.0
+custom_constants/separation = 16
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Generator/CornerRadius"]
+margin_top = 5.0
+margin_right = 115.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 115, 0 )
+text = "Corner Radius"
+align = 2
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/HBoxContainer/Generator/CornerRadius"]
+margin_left = 131.0
+margin_right = 205.0
+margin_bottom = 33.0
+max_value = 8.0
+value = 4.0
+
+[node name="CornersBeveled" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Generator"]
+margin_top = 154.0
+margin_right = 205.0
+margin_bottom = 185.0
+hint_tooltip = "If enabled, corners are beveled instead of rounded.
+Beveled corners are slightly faster to render on low-end devices."
+custom_constants/separation = 16
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Generator/CornersBeveled"]
+margin_top = 4.0
+margin_right = 124.0
+margin_bottom = 27.0
+rect_min_size = Vector2( 115, 0 )
+text = "Beveled Corners"
+align = 2
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer/HBoxContainer/Generator/CornersBeveled"]
+margin_left = 140.0
+margin_right = 205.0
+margin_bottom = 31.0
+hint_tooltip = "If enabled, corners are beveled instead of rounded.
+Beveled corners are slightly faster to render on low-end devices."
+size_flags_horizontal = 3
+text = "On"
+
+[node name="SpacerBottom" type="Control" parent="VBoxContainer/HBoxContainer/Generator"]
+margin_top = 197.0
+margin_right = 205.0
+margin_bottom = 212.0
+rect_min_size = Vector2( 0, 15 )
+
+[node name="SaveTheme" type="Button" parent="VBoxContainer/HBoxContainer/Generator"]
+margin_top = 224.0
+margin_right = 205.0
+margin_bottom = 264.0
+rect_min_size = Vector2( 0, 40 )
+text = "Save Theme"
+script = ExtResource( 3 )
+
+[node name="Panel" type="Panel" parent="VBoxContainer/HBoxContainer"]
+margin_left = 225.0
+margin_right = 984.0
+margin_bottom = 264.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource( 18 )
+
+[node name="Preview" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Panel/Preview"]
+margin_right = 739.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+text = "Preview"
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Panel/Preview"]
+margin_top = 34.0
+margin_right = 739.0
+margin_bottom = 193.0
+custom_constants/separation = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Panel/Preview/HBoxContainer"]
+margin_right = 94.0
+margin_bottom = 159.0
+custom_constants/separation = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer/Panel/Preview/HBoxContainer/VBoxContainer"]
+margin_right = 94.0
+margin_bottom = 23.0
+text = "Button"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer/HBoxContainer/Panel/Preview/HBoxContainer/VBoxContainer"]
+margin_top = 25.0
+margin_right = 94.0
+margin_bottom = 48.0
+text = "CheckBox"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBoxPressed" type="CheckBox" parent="VBoxContainer/HBoxContainer/Panel/Preview/HBoxContainer/VBoxContainer"]
+margin_top = 50.0
+margin_right = 94.0
+margin_bottom = 73.0
+pressed = true
+text = "CheckBox"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBoxDisabled" type="CheckBox" parent="VBoxContainer/HBoxContainer/Panel/Preview/HBoxContainer/VBoxContainer"]
+margin_top = 75.0
+margin_right = 94.0
+margin_bottom = 98.0
+disabled = true
+text = "CheckBox"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBoxDisabledPressed" type="CheckBox" parent="VBoxContainer/HBoxContainer/Panel/Preview/HBoxContainer/VBoxContainer"]
+margin_top = 100.0
+margin_right = 94.0
+margin_bottom = 123.0
+disabled = true
+pressed = true
+text = "CheckBox"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Panel/Preview/HBoxContainer"]
+margin_left = 114.0
+margin_right = 280.0
+margin_bottom = 159.0
+custom_constants/separation = 2
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer/Panel/Preview/HBoxContainer/VBoxContainer2"]
+margin_right = 166.0
+margin_bottom = 23.0
+disabled = true
+text = "Button"
+
+[node name="CheckButton" type="CheckButton" parent="VBoxContainer/HBoxContainer/Panel/Preview/HBoxContainer/VBoxContainer2"]
+margin_top = 25.0
+margin_right = 166.0
+margin_bottom = 57.0
+text = "CheckButton"
+
+[node name="CheckButtonPressed" type="CheckButton" parent="VBoxContainer/HBoxContainer/Panel/Preview/HBoxContainer/VBoxContainer2"]
+margin_top = 59.0
+margin_right = 166.0
+margin_bottom = 91.0
+pressed = true
+text = "CheckButton"
+
+[node name="CheckButtonDisabled" type="CheckButton" parent="VBoxContainer/HBoxContainer/Panel/Preview/HBoxContainer/VBoxContainer2"]
+margin_top = 93.0
+margin_right = 166.0
+margin_bottom = 125.0
+disabled = true
+text = "CheckButton"
+
+[node name="CheckButtonDisabledPressed" type="CheckButton" parent="VBoxContainer/HBoxContainer/Panel/Preview/HBoxContainer/VBoxContainer2"]
+margin_top = 127.0
+margin_right = 166.0
+margin_bottom = 159.0
+disabled = true
+pressed = true
+text = "CheckButton"
+[connection signal="color_changed" from="VBoxContainer/HBoxContainer/Generator/BaseColor/ColorPickerButton" to="." method="_on_base_color_changed"]
