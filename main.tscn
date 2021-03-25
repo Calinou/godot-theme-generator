@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://fonts/noto_sans_regular.tres" type="DynamicFontData" id=1]
 [ext_resource path="res://main.gd" type="Script" id=2]
@@ -15,6 +15,13 @@ size = 32
 font_data = ExtResource( 1 )
 
 [sub_resource type="StyleBoxFlat" id=4]
+
+[sub_resource type="StyleBoxFlat" id=19]
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
 
 [sub_resource type="StyleBoxFlat" id=5]
 
@@ -50,7 +57,7 @@ Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
 Button/constants/hseparation = 2
 Button/fonts/font = null
 Button/styles/disabled = SubResource( 4 )
-Button/styles/focus = null
+Button/styles/focus = SubResource( 19 )
 Button/styles/hover = SubResource( 5 )
 Button/styles/normal = SubResource( 6 )
 Button/styles/pressed = SubResource( 7 )
@@ -385,3 +392,5 @@ disabled = true
 pressed = true
 text = "CheckButton"
 [connection signal="color_changed" from="VBoxContainer/HBoxContainer/Generator/BaseColor/ColorPickerButton" to="." method="_on_base_color_changed"]
+[connection signal="value_changed" from="VBoxContainer/HBoxContainer/Generator/CornerRadius/SpinBox" to="." method="_on_corner_radius_changed"]
+[connection signal="toggled" from="VBoxContainer/HBoxContainer/Generator/CornersBeveled/CheckBox" to="." method="_on_corners_beveled_toggled"]
